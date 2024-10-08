@@ -80,7 +80,8 @@ class part1_calculator : AppCompatActivity() {
                     val valueA_f = valueA.toFloat()
 
                     // перевірка на коретність значень
-                    if (valueH_f+valueC_f+valueS_f+valueN_f+valueO_f+valueW_f+valueA_f == 100.0f) {
+                    if (String.format(Locale.US, "%.2f", (valueH_f+valueC_f+valueS_f+valueN_f+valueO_f+
+                                valueW_f+valueA_f)).toFloat() == 100.0f) {
                         // коефіцієнти перехода
                         val k_wd = 100/(100-valueW_f)
                         val k_wc = 100/(100-valueW_f-valueA_f)
